@@ -11,7 +11,7 @@ const rl = readline.createInterface({
  * @param question
  */
 function prompt(question: string) {
-  return new Promise<string>((resolve, reject) => {
+  return new Promise<string>(resolve => {
     rl.question(`${question} `, (answer: string) => {
       resolve(answer);
     })
@@ -48,7 +48,7 @@ function parseCommands(command: string): Command {
 
   return {
     direction,
-    steps: parseInt(steps, 10)
+    steps: parseInt(steps, 10),
   }
 }
 
