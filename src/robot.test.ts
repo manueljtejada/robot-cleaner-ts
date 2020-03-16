@@ -1,6 +1,11 @@
 import Robot from "./robot";
 
 describe("Robot", () => {
+  it("should be defined", () => {
+    const robot = new Robot(0, 0, []);
+    expect(robot).toBeDefined();
+  });
+
   it("should clean 4 spots", () => {
     const commands = [
       {
